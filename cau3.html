@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let vowels = ["a", "o", "e", "u", "i"]
+    let cnt = 0;
+    let str = prompt("Nhập vào một chuỗi");
+
+    function countVowels(str) {
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowels.length; j++) {
+                if (str.charAt(i) === vowels[j]) {
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }
+
+    if (countVowels(str)) {
+        document.write("Số ký tự nguyên âm trong chuỗi là: ", cnt)
+    } else {
+        document.write("Chuỗi không có ký tự nguyên âm")
+    }
+</script>
