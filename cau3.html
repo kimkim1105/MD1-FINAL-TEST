@@ -11,12 +11,13 @@
 <script>
     let vowels = ["a", "o", "e", "u", "i"]
     let cnt = 0;
-    let str = prompt("Nhập vào một chuỗi");
+    let str = prompt("Nhập vào một chuỗi").toLowerCase();
+    let arr = str.split("")
 
-    function countVowels(str) {
-        for (let i = 0; i < str.length; i++) {
+    function countVowels(arr) {
+        for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < vowels.length; j++) {
-                if (str.charAt(i) === vowels[j]) {
+                if (arr[i] === vowels[j]) {
                     cnt++;
                 }
             }
@@ -24,7 +25,7 @@
         return cnt;
     }
 
-    if (countVowels(str)) {
+    if (countVowels(arr)) {
         document.write("Số ký tự nguyên âm trong chuỗi là: ", cnt)
     } else {
         document.write("Chuỗi không có ký tự nguyên âm")
